@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository status
 
-This repository is currently documentation-first. There is no source package, test suite, build configuration, README, Cursor rule, or Copilot instruction in the current tree. The project-specific guidance is this `CLAUDE.md` file and the material under `docs/`, especially `docs/acmg_automated_classification_research_report.md`.
+This repository now contains the Phase A MASIV Python package scaffold, test suite, and build configuration. There is no README, Cursor rule, or Copilot instruction in the current tree. The project-specific guidance is this `CLAUDE.md` file and the material under `docs/`, especially `docs/acmg_automated_classification_research_report.md`.
 
 ## Project goal
 
@@ -25,19 +25,26 @@ Read these before designing or implementing ACMG logic:
 
 ## Development commands
 
-No runnable code exists yet, so there are no verified build, lint, or test commands. When adding the initial implementation, add the corresponding package metadata and keep this section current.
-
-Recommended initial Python command shape once the package exists:
+Use the project-local virtual environment to avoid modifying system Python dependencies:
 
 ```bash
-python -m pytest
-python -m pytest tests/path/test_file.py::test_name -v
-python -m ruff check .
-python -m ruff format .
-python -m mypy src
+python -m venv .venv
+.venv/bin/python -m pip install --upgrade pip
+.venv/bin/python -m pip install -e '.[dev]'
 ```
 
-Do not report these as working commands until the matching tools/configuration have been added and run successfully.
+Verified Phase A commands:
+
+```bash
+.venv/bin/python -m pytest
+.venv/bin/python -m pytest tests/path/test_file.py::test_name -v
+.venv/bin/python -m ruff check .
+.venv/bin/python -m ruff format .
+.venv/bin/python -m ruff format --check .
+.venv/bin/python -m mypy src
+.venv/bin/masiv parse tests/fixtures/sample.vcf --output /tmp/masiv-variants.json
+.venv/bin/masiv combine tests/fixtures/criteria_likely_pathogenic.json --output /tmp/masiv-classification.json
+```
 
 ## Architecture direction
 
