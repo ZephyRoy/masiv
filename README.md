@@ -1,6 +1,4 @@
-# MASIV
-
-**Multi Agent System for Interpreting Variants**
+# MASIV: Multi Agent System for Interpreting Variants
 
 MASIV is a research-oriented framework for automated germline sequence-variant interpretation under the ACMG/AMP classification system. Its goal is not to replace expert review, but to make the computable parts of variant classification more reproducible, auditable, and transparent.
 
