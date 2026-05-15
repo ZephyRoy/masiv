@@ -124,7 +124,7 @@ class CombinerError(MasivError):
 Run:
 
 ```bash
-python -m pip install -e /data/code/mavif[dev]
+python -m pip install -e /data/code/masiv[dev]
 ```
 
 Expected: package installs successfully, including pytest, Ruff, mypy, and Pydantic.
@@ -1530,8 +1530,8 @@ Expected: PASS.
 Run:
 
 ```bash
-masiv parse /data/code/mavif/tests/fixtures/sample.vcf --output /tmp/masiv-variants.json
-masiv combine /data/code/mavif/tests/fixtures/criteria_likely_pathogenic.json --output /tmp/masiv-classification.json
+masiv parse /data/code/masiv/tests/fixtures/sample.vcf --output /tmp/masiv-variants.json
+masiv combine /data/code/masiv/tests/fixtures/criteria_likely_pathogenic.json --output /tmp/masiv-classification.json
 ```
 
 Expected: both commands exit with code 0 and write JSON output files.
@@ -1578,8 +1578,8 @@ Expected: PASS with no type errors.
 Run:
 
 ```bash
-masiv parse /data/code/mavif/tests/fixtures/sample.vcf --output /tmp/masiv-variants.json
-masiv combine /data/code/mavif/tests/fixtures/criteria_likely_pathogenic.json --output /tmp/masiv-classification.json
+masiv parse /data/code/masiv/tests/fixtures/sample.vcf --output /tmp/masiv-variants.json
+masiv combine /data/code/masiv/tests/fixtures/criteria_likely_pathogenic.json --output /tmp/masiv-classification.json
 python -m json.tool /tmp/masiv-variants.json >/dev/null
 python -m json.tool /tmp/masiv-classification.json >/dev/null
 ```

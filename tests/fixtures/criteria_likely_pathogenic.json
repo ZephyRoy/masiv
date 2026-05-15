@@ -1,0 +1,32 @@
+{
+  "criteria": [
+    {
+      "criterion": "PS1",
+      "direction": "pathogenic",
+      "strength": "strong",
+      "status": "met",
+      "rule_pack": "synthetic",
+      "rule_version": "test"
+    },
+    {
+      "criterion": "PM2",
+      "direction": "pathogenic",
+      "strength": "moderate",
+      "status": "met",
+      "rule_pack": "synthetic",
+      "rule_version": "test"
+    },
+    {
+      "criterion": "PS3",
+      "direction": "pathogenic",
+      "strength": "strong",
+      "status": "not_assessed",
+      "rule_pack": "synthetic",
+      "rule_version": "test",
+      "limitations": ["No functional assay evidence supplied."]
+    }
+  ],
+  "source_manifest": [
+    {"name": "synthetic", "version": "test", "kind": "fixture"}
+  ]
+}

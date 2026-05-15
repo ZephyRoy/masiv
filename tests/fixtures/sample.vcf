@@ -1,0 +1,11 @@
+##fileformat=VCFv4.3
+##reference=GRCh38
+##contig=<ID=1,assembly=GRCh38>
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total Depth">
+##INFO=<ID=SOMATIC,Number=0,Type=Flag,Description="Somatic flag fixture">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Allelic depths">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read depth">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	proband	mother
+1	12345	rs1	A	G	99.7	PASS	DP=20;SOMATIC	GT:AD:DP	0/1:10,8:18	0/0:20,0:20
+1	12346	.	C	T,G	.	q10	DP=12	GT:DP	1/2:12	0/1:11
